@@ -1,1 +1,0 @@
-/home/cullen/.config/fish
