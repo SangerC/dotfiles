@@ -59,8 +59,8 @@ let g:netrw_banner=0
 let g:netrw_browse_split=4
 let g:netrw_altv=1
 let g:netrw_liststyle=3
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+"let g:netrw_list_hide=netrw_gitignore#Hide()
+"let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 "}}}
 
 "{{{Filetypes
@@ -69,16 +69,6 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 autocmd FileType vim setlocal foldmethod=marker
 "}}}2
 "{{{2 Asciidoc
-
-
-"function! Foldexpr_asciidoc(lnum)
-"    let l0 = getline(a:lnum)
-"    if l0 =~ '^=\{1,5}\s\+\S.*$'
-"        return '>'.matchend(l0, '^=\+')
-"   else
-"        return '='
-"    endif
-"endfunc
 
 function! AsciidocLevel()
 
@@ -103,7 +93,6 @@ function! AsciidocLevel()
     return "="
 endfunction
 
-"autocmd FileType asciidoc setlocal foldexpr=Foldexpr_asciidoc(v:lnum)
 autocmd FileType asciidoc setlocal foldexpr=AsciidocLevel()
 
 autocmd FileType asciidoc setlocal foldmethod=expr
