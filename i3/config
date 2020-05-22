@@ -102,7 +102,7 @@ bindsym $mod+Ctrl+z exec alacritty
 bindsym $mod+Ctrl+x exec alacritty -e ranger
 
 #Firefox
-bindsym $mod+Ctrl+f exec firefox
+bindsym $mod+Ctrl+f exec asciidoctor /home/cullen/Notes/todo.adoc && firefox
 
 #Code
 bindsym $mod+Ctrl+c exec code
@@ -112,6 +112,9 @@ bindsym $mod+Ctrl+a workspace number $ws8
 
 #Dmenu
 bindsym $mod+Ctrl+space exec --no-startup-id i3-dmenu-desktop
+
+#Picom
+bindsym $mod+Ctrl+p exec sh /home/cullen/Random/scripts/picomToggle.sh
 
 #Screenshots
 bindsym Print exec spectacle
@@ -261,3 +264,7 @@ exec syncthing
 exec steam
 exec latte-dock
 exec ferdi
+
+
+#// vim: set nospell :
+

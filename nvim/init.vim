@@ -4,8 +4,23 @@
 
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'preservim/nerdtree'
 
+"{{{2 Airline
 
+Plug 'vim-airline/vim-airline'
+
+Plug 'vim-airline/vim-airline-themes'
+
+let g:airline_powerline_fonts = 1
+
+set t_Co=256
+
+let g:airline_theme='deus'
+
+"}}}2
+
+Plug 'bling/vim-bufferline'
 
 call plug#end()
 
@@ -15,6 +30,10 @@ call plug#end()
 set nocompatible
 
 set spell spelllang=en_us
+
+set splitbelow
+
+set splitright
 
 set number
 
@@ -32,13 +51,16 @@ filetype plugin on
 
 set path+=**
 
+set laststatus=2
+
 "}}}
 
 "{{{Hotkeys
 let mapleader = ","
 
-xnoremap <leader>c <esc>:'<,'>:w !xclip -sel clipboard -i <CR> <CR>
+xnoremap <leader>c <esc>:'<,'>:w !xclip -sel clipboard -i <CR>
 
+nnoremap <leader>nt :NERDTreeToggle<CR>
 
 
 
