@@ -42,7 +42,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][12][Applets][57][Configuration]
-PreloadWeight=0
+PreloadWeight=100
 
 [Containments][12][Applets][58]
 immutability=1
@@ -56,7 +56,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][12][Applets][59][Configuration]
-PreloadWeight=10
+PreloadWeight=85
 
 [Containments][12][Applets][59][Configuration][Appearance]
 dateFormat=longDate
@@ -74,7 +74,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][12][Applets][74][Configuration]
-PreloadWeight=5
+PreloadWeight=100
 
 [Containments][12][Applets][83]
 immutability=1
@@ -96,7 +96,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][12][Applets][84][Configuration]
-PreloadWeight=0
+PreloadWeight=100
 
 [Containments][12][Applets][84][Configuration][Appearance]
 lastSelectedTimezone=Asia/Tokyo
@@ -113,7 +113,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][12][Applets][85][Configuration]
-PreloadWeight=5
+PreloadWeight=100
 
 [Containments][12][Applets][85][Configuration][Appearance]
 lastSelectedTimezone=America/Indiana/Indianapolis
@@ -122,13 +122,6 @@ selectedTimeZones=America/Indiana/Indianapolis
 [Containments][12][Applets][85][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
-
-[Containments][12][Applets][86]
-immutability=1
-plugin=org.kde.plasma.notifications
-
-[Containments][12][Applets][86][Configuration]
-PreloadWeight=55
 
 [Containments][12][ConfigDialog]
 DialogHeight=968
@@ -142,7 +135,7 @@ advanced=true
 animationLauncherBouncing=false
 animationWindowAddedInGroup=false
 animationWindowInAttention=false
-appletOrder=83;86;57;58;74;56;84;85;59
+appletOrder=83;57;58;74;56;84;85;59
 blurEnabled=false
 dragActiveWindowEnabled=true
 iconSize=25
@@ -180,6 +173,25 @@ location=3
 plugin=org.kde.plasma.private.systemtray
 wallpaperplugin=org.kde.image
 
+[Containments][15][Applets][86]
+immutability=1
+plugin=org.kde.plasma.notifications
+
+[Containments][15][Applets][87]
+immutability=1
+plugin=org.kde.plasma.nightcolorcontrol
+
+[Containments][15][Applets][90]
+immutability=1
+plugin=org.kde.plasma.networkmanagement
+
+[Containments][15][Applets][92]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][15][Applets][92][Configuration]
+PreloadWeight=0
+
 [Containments][15][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
@@ -188,8 +200,8 @@ DialogWidth=720
 PreloadWeight=0
 
 [Containments][15][General]
-extraItems=org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.notifications
-knownItems=org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.vault,org.kde.discovernotifier,org.kde.plasma.bluetooth,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.notifications
+extraItems=org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.nightcolorcontrol
+knownItems=org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.vault,org.kde.discovernotifier,org.kde.plasma.bluetooth,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.nightcolorcontrol
 
 [Containments][20]
 activityId=
@@ -340,6 +352,25 @@ location=3
 plugin=org.kde.plasma.private.systemtray
 wallpaperplugin=org.kde.image
 
+[Containments][7][Applets][88]
+immutability=1
+plugin=org.kde.plasma.notifications
+
+[Containments][7][Applets][89]
+immutability=1
+plugin=org.kde.plasma.nightcolorcontrol
+
+[Containments][7][Applets][91]
+immutability=1
+plugin=org.kde.plasma.networkmanagement
+
+[Containments][7][Applets][93]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][7][Applets][93][Configuration]
+PreloadWeight=0
+
 [Containments][7][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
@@ -348,8 +379,8 @@ DialogWidth=720
 PreloadWeight=0
 
 [Containments][7][General]
-extraItems=org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.notifications
-knownItems=org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.vault,org.kde.discovernotifier,org.kde.plasma.bluetooth,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.notifications
+extraItems=org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.nightcolorcontrol
+knownItems=org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.vault,org.kde.discovernotifier,org.kde.plasma.bluetooth,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.nightcolorcontrol
 
 [LayoutSettings]
 activities=

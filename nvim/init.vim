@@ -37,8 +37,6 @@ set splitright
 
 set number
 
-set relativenumber
-
 syntax enable
 
 set wildmenu
@@ -62,7 +60,9 @@ xnoremap <leader>c <esc>:'<,'>:w !xclip -sel clipboard -i <CR>
 
 nnoremap <leader>nt :NERDTreeToggle<CR>
 
+nnoremap <leader>h <del>j0
 
+nnoremap <leader>k w<del>i(<esc>wwi)<esc>j0
 
 "{{{2Commands
 
