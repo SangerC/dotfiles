@@ -115,6 +115,9 @@ bindsym $mod+Ctrl+space exec --no-startup-id i3-dmenu-desktop
 #Picom
 bindsym $mod+Ctrl+p exec sh /home/cullen/Random/scripts/picomToggle.sh
 
+#Clipboard
+bindsym $mod+Ctrl+b exec clipmenu
+
 #Screenshots
 bindsym Print exec spectacle
 bindsym $mod+Ctrl+r exec spectacle -r
@@ -124,7 +127,7 @@ bindsym $mod+Ctrl+w exec spectacle -a
 bindsym $mod+Ctrl+s workspace number $ws9
 
 #krunner
-#bindsym Mod1+space exec krunner
+bindsym Mod1+space exec krunner
 
 #Dolphin
 bindsym $mod+Ctrl+d exec dolphin
@@ -146,6 +149,11 @@ bindcode 192 exec /home/cullen/Random/scripts/audio/move-pulse alsa_output.usb-F
 bindcode 193 exec /home/cullen/Random/scripts/audio/move-pulse alsa_output.pci-0000_25_00.3.analog-stereo
 bindcode 194 exec /home/cullen/Random/scripts/myxrandr.sh
 bindcode 195 exec /home/cullen/Random/scripts/changewallpaper.sh
+
+#mpv
+bindcode 172 exec /home/cullen/Random/scripts/mpv/cyclepausempv
+bindcode 173 exec /home/cullen/Random/scripts/mpv/prevmpv
+bindcode 171 exec /home/cullen/Random/scripts/mpv/nextmpv
 
 #reset audio
 #bindsym $mod+Shift+p exec /home/cullen/Random/scripts/audio/pulsereset.sh
@@ -261,8 +269,12 @@ exec --no-startup-id numlockx &
 exec --no-startup-id picom
 exec syncthing
 exec steam
-exec latte-dock
+#exec latte-dock
 exec ferdi
 exec dunst
-#// vim: set nospell :
+exec clipmenud &
+exec polybar example &
 
+
+
+#// vim: set nospell :
