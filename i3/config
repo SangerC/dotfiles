@@ -28,14 +28,14 @@ set $ws10 "10"
 ###################################################################################
 
 #Main Monitor
-workspace $ws1 output DP-2
-workspace $ws2 output DP-2
-workspace $ws3 output DP-2
+workspace $ws1 output DP-4
+workspace $ws2 output DP-4
+workspace $ws3 output DP-4
 
 #Right Monitor
-workspace $ws4 output DP-1
-workspace $ws5 output DP-1
-workspace $ws6 output DP-1
+workspace $ws4 output DP-3
+workspace $ws5 output DP-3
+workspace $ws6 output DP-3
 
 #Left Monitor
 workspace $ws7 output DVI-D-0 
@@ -101,7 +101,7 @@ bindsym $mod+Ctrl+z exec alacritty
 bindsym $mod+Ctrl+x exec alacritty -e ranger
 
 #Firefox
-bindsym $mod+Ctrl+f exec asciidoctor /home/cullen/Notes/todo.adoc && firefox
+bindsym $mod+Ctrl+f exec pandoc -i /home/cullen/Notes/todo.md -o /home/cullen/Notes/todo.md && firefox
 
 #Code
 bindsym $mod+Ctrl+c exec code
@@ -146,7 +146,7 @@ bindsym $mod+Mod2+KP_2 exec /home/cullen/Random/scripts/numKeys/num2.sh
 #macroKeys
 bindcode 191 exec ~/Random/scripts/sleep.sh
 bindcode 192 exec /home/cullen/Random/scripts/audio/move-pulse alsa_output.usb-FiiO_DigiHug_USB_Audio-01.analog-stereo
-bindcode 193 exec /home/cullen/Random/scripts/audio/move-pulse alsa_output.pci-0000_25_00.3.analog-stereo
+bindcode 193 exec sleep 0.2 && xdotool getactivewindow type "1075" && sleep 0.1 && xdotool getactivewindow key Tab && sleep 0.1 && xdotool type "1482" && sleep 0.1 && xdotool getactivewindow key Tab && sleep 0.1 && xdotool type "1122" && sleep 0.1 && xdotool getactivewindow key Tab && sleep 0.1 && xdotool type "1133" && sleep 0.1 && xdotool getactivewindow key Tab && sleep 0.1 && xdotool type "1531"
 bindcode 194 exec /home/cullen/Random/scripts/myxrandr.sh
 bindcode 195 exec /home/cullen/Random/scripts/changewallpaper.sh
 
@@ -268,13 +268,10 @@ exec_always /home/cullen/Random/scripts/Startup.sh
 exec --no-startup-id numlockx &
 exec --no-startup-id picom
 exec syncthing
-exec steam
-#exec latte-dock
+exec latte-dock
 exec ferdi
 exec dunst
 exec clipmenud &
-exec polybar example &
-
 
 
 #// vim: set nospell :
