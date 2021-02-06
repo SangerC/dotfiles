@@ -1,7 +1,6 @@
 -- Plugins
 vim.cmd [[packadd packer.nvim]]
 
-
 return require('packer').startup(function() 
 
 	use {"wbthomason/packer.nvim", opt = true}
@@ -12,24 +11,26 @@ return require('packer').startup(function()
 	
 	use 'vim-airline/vim-airline-themes'
 
-	use 'lervag/vimtex'	
-
 	use 'akinsho/nvim-bufferline.lua'
 
+	use 'lambdalisue/fern.vim'
+	--Languages
+	use 'sheerun/vim-polyglot'
 
+	use 'lervag/vimtex'	
+	
+	--Themes
+	use 'Badacadabra/vim-archery'
 
+	use 'tyrannicaltoucan/vim-deep-space'
 
+	use 'cocopon/iceberg.vim'
 
+	use 'liuchengxu/space-vim-dark'
 
+	use 'cooper-anderson/glowbeam.vim'
 
-
-
-
-
-
-
-
-
+	use 'iamcco/markdown-preview.nvim'
 
 
 
@@ -42,3 +43,4 @@ return require('packer').startup(function()
 
 
 end)
+

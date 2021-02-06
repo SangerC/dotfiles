@@ -37,7 +37,7 @@ opt.showmode = false
 
 opt.hidden = true
 
-
+opt.foldlevel = 1
 
 -- }}}
 

@@ -1,3 +1,7 @@
+-- The K (keybind) namespace should be loaded globally
+-- Set keybinds by using `K.<mode>(<key>, <cmd>, <opts>)`
+-- The keybind can be annotated by adding a string:
+--     K.i(...) [[This is an annotation]]
 
 -- Declarations {{{
 local binds = {}
@@ -75,24 +79,32 @@ local map = {
 }
 -- }}}
 
+function CullensRun()
+    local filetype = vim.api.nvim_buf_get_option(0, "syntax")
 
-
+    if filetype == "markdown" then
+        vim.cmd("MarkdownPreview")
+    elseif filetype == "tex" then
+        vim.cmd("VimtexCompile")
+    end
+end
 
 local function keybinds()
+	--Buffers
+	map.n("<C-k>", "<cmd>bnext<CR>")
+	map.n("<C-j>", "<cmd>bprevious<CR>")
+	map.sp("B", "<cmd>bd<CR>")
 
-	map.group([[ctrl-[hjkl] Movement]], function()
-		map.i("<C-k>", "<up>")
-		map.i("<C-j>", "<down>")
-		map.i("<C-h>", "<left>")
-		map.i("<C-l>", "<right>")
-	end)
-	-- }}}
+	--Files
+	map.sp("f", "<cmd>Fern .<CR>")
 
-	-- Buffers {{{
-	map.group([[Move between buffers]], function()
-		map.n("<C-k>", "<cmd>bnext<CR>")
-		map.n("<C-j>", "<cmd>bprevious<CR>")
-	end)
+	--Previews
+	map.sp('p', "<cmd>lua CullensRun()<CR>")
+
+
+
+
+
 
 end
 
@@ -101,6 +113,3 @@ return {
 	binds = binds,
 	map = map
 }
-
-
-

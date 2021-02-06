@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/cullen/.dotfiles/nvim/lua/cullen'
 let g:netrw_dirhist_6='/home/cullen/Projects/SuperSmashBrothersDatabaseFrontend/src'
 let g:netrw_dirhist_5='/home/cullen/Projects/SuperSmashBrothersDatabaseFrontend/src/ui'
 let g:netrw_dirhist_4='/home/cullen'

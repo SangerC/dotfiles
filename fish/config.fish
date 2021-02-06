@@ -14,3 +14,7 @@ function cd
     end
 end
 
+function run
+    gcc $argv
+    ./a.out
+end
