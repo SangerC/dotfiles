@@ -39,6 +39,8 @@ opt.hidden = true
 
 opt.foldlevel = 1
 
+vim.g.netrw_liststyle = 3
+
 -- }}}
 
 

@@ -96,7 +96,7 @@ local function keybinds()
 	map.sp("B", "<cmd>bd<CR>")
 
 	--Files
-	map.sp("f", "<cmd>Fern .<CR>")
+	map.sp("f", "<cmd>Vexplore .<CR>")
 
 	--Previews
 	map.sp('p', "<cmd>lua CullensRun()<CR>")
