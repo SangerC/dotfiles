@@ -86,25 +86,62 @@ function CullensRun()
         vim.cmd("MarkdownPreview")
     elseif filetype == "tex" then
         vim.cmd("VimtexCompile")
-    end
+		elseif filetype == "c" then
+				vim.cmd("!gcc % & ./a.out")
+		end
 end
+
+function GitCommit(push)
+	local message =	vim.fn.input("Commit message: ")
+
+	vim.cmd("!git add -A")
+	vim.cmd("!git commit -m \"".. message.."\"")
+	if push then
+		vim.cmd("!git push")
+	end
+
+end
+
 
 local function keybinds()
 	--Buffers
 	map.n("<C-k>", "<cmd>bnext<CR>")
 	map.n("<C-j>", "<cmd>bprevious<CR>")
-	map.sp("B", "<cmd>bd<CR>")
+	map.sp("K", "<cmd>bd<CR>")
+
+	--Splits
+	map.n("<C-h>", "<C-W><C-H>")
+	map.n("<C-l>", "<C-W><C-L>")
+
+	--lsp
+	map.i("<M-RETURN>","<cmd>Lspsaga code_action<CR>")
+	map.n("<M-RETURN>","<cmd>Lspsaga code_action<CR>")
+	map.n("<M-j>","<cmd>Lspsaga diagnostic_jump_prev<CR>")
+	map.n("<M-k>","<cmd>Lspsaga diagnostic_jump_next<CR>")
+	map.sp("r","Lspsaga rename<CR>")
+	map.sp("d","Lspsaga lsp_finder<CR>")
 
 	--Files
-	map.sp("f", "<cmd>Vexplore .<CR>")
+	map.sp("f", "<cmd>NvimTreeToggle<CR>")
+	map.sp("F", "<cmd>NvimTreeFindFile<CR>")
+	map.sp("t", "<cmd>Telescope find_files<CR>")
 
 	--Previews
 	map.sp('p', "<cmd>lua CullensRun()<CR>")
 
+	--Save
+	map.n("<C-s>", "<cmd>w<CR>")
+	map.i("<C-s>", "<cmd>w<CR>")
 
+	--Git
+	map.sp("g", "<cmd>lua GitCommit(false) <CR>")
+	map.sp("G", "<cmd>lua GitCommit(true) <CR>")
 
-
-
+	--Other
+	map.sp("a", "<cmd>!alacritty<CR>")
+	map.n("<M-d>", "mdO<ESC>`d")
+	map.n("<M-u>", "mukdd`u")
+	map.n("Y","my^y$`y")
 
 end
 

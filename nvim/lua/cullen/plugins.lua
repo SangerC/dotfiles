@@ -14,11 +14,37 @@ return require('packer').startup(function()
 	use 'akinsho/nvim-bufferline.lua'
 
 	use 'lambdalisue/fern.vim'
+
+	use 'kyazdani42/nvim-web-devicons'
+
+	use 'jbyuki/instant.nvim'
+
+	--Files
+	
+	use 'kyazdani42/nvim-tree.lua'
+
+	use {
+  	'nvim-telescope/telescope.nvim',
+  	requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+	}
+
 	--Languages
 	use 'sheerun/vim-polyglot'
 
 	use 'lervag/vimtex'	
-	
+
+	use 'thiagoalessio/rainbow_levels.vim'
+
+	--Completion
+
+	use 'neovim/nvim-lspconfig'
+
+	use 'hrsh7th/nvim-compe'
+
+	use 'SirVer/ultisnips'
+
+	use 'glepnir/lspsaga.nvim'
+
 	--Themes
 	use 'Badacadabra/vim-archery'
 

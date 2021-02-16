@@ -39,16 +39,15 @@ opt.hidden = true
 
 opt.foldlevel = 1
 
+vim.opt.pumheight = 20
+
+opt.listchars = [[tab:│\ ]]
+
+opt.list = true
+
 vim.g.netrw_liststyle = 3
 
 -- }}}
-
-
-
-
-
-
-
 
 
 

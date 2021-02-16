@@ -18,3 +18,20 @@ function run
     gcc $argv
     ./a.out
 end
+
+function ls
+    if count $argv > /dev/null
+        exa "$argv"
+    else
+        exa .
+    end
+end
+
+function vimdate
+    cd ~/git/neovim
+    git pull
+    wait $last_pid
+    sudo make CMAKE_BUILD_TYPE=RelWithDebInfo
+    wait $last_pid
+    sudo make install
+end
