@@ -5,7 +5,6 @@ powerline-setup
 
 set PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin"
 
-
 function cd
     if count $argv > /dev/null
         builtin cd "$argv"; and exa

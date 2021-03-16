@@ -269,7 +269,7 @@ exec --no-startup-id numlockx &
 exec --no-startup-id picom
 exec syncthing
 exec latte-dock
-exec ferdi
+#exec ferdi
 exec dunst
 exec clipmenud &
 

@@ -3,6 +3,7 @@
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_config:cd\x20\x7e/\x2edotfiles\x20\x26\x26\x20vim
 SETUVAR _fish_abbr_todo:vim\x20\x7e/Notes/todo\x2emd
+SETUVAR _fish_abbr_yayv:yay\x20\x26\x26\x20vimdate
 SETUVAR fish_color_autosuggestion:555
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:00d7ff
