@@ -57,12 +57,6 @@ lspconfig.tsserver.setup{}
 --Tex
 lspconfig.texlab.setup{}
 
---Python
-lspconfig.pyls_ms.setup{
-
-cmd = { "dotnet", "exec", "/home/cullen/git/python-language-server/output/bin/Debug/Microsoft.Python.LanguageServer.dll" };
-}
-
 --Compe
 local compe = require("compe")
 
