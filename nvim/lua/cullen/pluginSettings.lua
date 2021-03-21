@@ -63,7 +63,7 @@ cmd = { "dotnet", "exec", "/home/cullen/git/python-language-server/output/bin/De
 }
 
 --Rust
-lspconfig.rust-analyzer.setup{}
+lspconfig.rust_analyzer.setup{}
 
 --Compe
 local compe = require("compe")
