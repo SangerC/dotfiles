@@ -62,6 +62,9 @@ lspconfig.pyls_ms.setup{
 cmd = { "dotnet", "exec", "/home/cullen/git/python-language-server/output/bin/Debug/Microsoft.Python.LanguageServer.dll" };
 }
 
+--Rust
+lspconfig.rust-analyzer.setup{}
+
 --Compe
 local compe = require("compe")
 

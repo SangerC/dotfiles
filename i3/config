@@ -65,10 +65,6 @@ for_window [class=.*] border pixel 2
 font pango:DejaVu Sans Mono 12
 #################### Special Windows ##############################################
 
-assign [class="dota2"] number $ws3
-assign [class="Steam"] number $ws6
-assign [class="zoom"] number $ws5
-assign [class="Ferdi"] number $ws8
 no_focus [window_type="notification"]
 for_window [title="i3HotkeyHelper"] floating enable
 
@@ -101,7 +97,7 @@ bindsym $mod+Ctrl+z exec alacritty
 bindsym $mod+Ctrl+x exec alacritty -e ranger
 
 #Firefox
-bindsym $mod+Ctrl+f exec pandoc -i /home/cullen/Notes/todo.md -o /home/cullen/Notes/todo.md && firefox
+bindsym $mod+Ctrl+f exec firefox
 
 #Code
 bindsym $mod+Ctrl+c exec code
@@ -110,7 +106,7 @@ bindsym $mod+Ctrl+c exec code
 bindsym $mod+Ctrl+a workspace number $ws8
 
 #Dmenu
-bindsym $mod+Ctrl+space exec --no-startup-id i3-dmenu-desktop
+bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop
 
 #Picom
 bindsym $mod+Ctrl+p exec sh /home/cullen/Random/scripts/picomToggle.sh
@@ -125,9 +121,6 @@ bindsym $mod+Ctrl+w exec spectacle -a
 
 #Music
 bindsym $mod+Ctrl+s workspace number $ws9
-
-#krunner
-bindsym Mod1+space exec krunner
 
 #Dolphin
 bindsym $mod+Ctrl+d exec dolphin
@@ -259,19 +252,25 @@ bindsym $mod+Ctrl+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
+
+###################################################################################
+#################         Bar                    ##################################
+###################################################################################
+bar {
+    i3bar_command i3bar --transparency
+    colors {
+       background #00000000   
+    }
+    output  DVI-D-0
+    status_command    i3blocks  
+
+}
+
 
 ###################################################################################
 #################         Startup Tasks          ##################################
 ###################################################################################
 exec_always /home/cullen/Random/scripts/Startup.sh
-exec --no-startup-id numlockx &
-exec --no-startup-id picom
-exec syncthing
-exec latte-dock
-exec ferdi
-exec dunst
-exec clipmenud &
-
 
 #// vim: set nospell :
