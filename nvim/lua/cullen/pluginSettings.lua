@@ -58,9 +58,7 @@ lspconfig.tsserver.setup{}
 lspconfig.texlab.setup{}
 
 --Python
-lspconfig.pyls_ms.setup{
-cmd = { "dotnet", "exec", "/home/cullen/git/python-language-server/output/bin/Debug/Microsoft.Python.LanguageServer.dll" };
-}
+lspconfig.pyls.setup{}
 
 --Rust
 lspconfig.rust_analyzer.setup{}

@@ -39,6 +39,12 @@ opt.hidden = true
 
 opt.foldlevel = 1
 
+opt.tabstop = 4
+
+opt.shiftwidth = 4
+
+opt.noexpandtab = true
+
 vim.opt.pumheight = 20
 
 vim.g.netrw_liststyle = 3
