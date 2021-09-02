@@ -138,7 +138,7 @@ local function keybinds()
 	map.sp("G", "<cmd>lua GitCommit(true) <CR>")
 
 	--Other
-	map.sp("a", "<cmd>!alacritty<CR>")
+	map.sp("a", "<cmd>!alacritty &<CR>")
 	map.n("<M-d>", "mdO<ESC>`d")
 	map.n("<M-u>", "mukdd`u")
 	map.n("Y","my^y$`y")

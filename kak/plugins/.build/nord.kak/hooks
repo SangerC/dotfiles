@@ -1,0 +1,3 @@
+
+mkdir -p /home/cullen/.config/kak/colors
+find . -type f -name '*.kak' -exec ln -sf "$PWD/{}" /home/cullen/.config/kak/colors/ \;

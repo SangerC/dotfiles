@@ -5,6 +5,7 @@ SETUVAR _fish_abbr_config:cd\x20\x7e/\x2efiles\x20\x26\x26\x20vim
 SETUVAR _fish_abbr_os:cd\x20\x7e/Projects/332
 SETUVAR _fish_abbr_school:cd\x20\x7e/Documents/School/Rose\x2dHulman/s2021/
 SETUVAR _fish_abbr_todo:vim\x20\x7e/Notes/todo\x2emd
+SETUVAR _fish_abbr_windows:sudo\x20qemu\x2dsystem\x2dx86_64\x20\x2dusb\x20\x2ddevice\x20usb\x2dtablet\x20\x2dm\x206G\x20\x2denable\x2dkvm\x20\x2dsmp\x204\x20\x2daudiodev\x20pa\x2cid\x3dsnd0\x20\x2ddevice\x20ich9\x2dintel\x2dhda\x20\x2ddevice\x20hda\x2doutput\x2caudiodev\x3dsnd0\x20\x2ddevice\x20qemu\x2dxhci\x2cid\x3dxhci\x20\x2dnic\x20user\x2cid\x3dnic0\x2csmb\x3d/home/cullen/Harddrive/VM/share\x20\x7e/Harddrive/VM/windows
 SETUVAR fish_color_autosuggestion:555
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:00d7ff

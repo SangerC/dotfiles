@@ -43,7 +43,7 @@ opt.tabstop = 4
 
 opt.shiftwidth = 4
 
-opt.noexpandtab = true
+opt.expandtab = false
 
 vim.opt.pumheight = 20
 
